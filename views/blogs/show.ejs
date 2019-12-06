@@ -2,42 +2,57 @@
 <div class="container">
     <div class="row">
         <div class="col-md-3">
-            <p class="lead details">Instances</p>
-            <div class="list-group">
-                <li class="list-group-item" active><strong>Author</strong> - <em><%= blog.author.username %></em></li>
-                <p class="list-group-item"><em>Paragraph about the Author will go here after that feature is added.</em>
-                </p>
-                <a class="list-group-item">View his Profile</a>
+            <div class="card">
+                <div class="card-body">
+                    <p class="card-title">Instances</p>
+                    <div class="list-group">
+                        <li class="list-group-item" active><strong>Author</strong> -
+                            <em><%= blog.author.username %></em></li>
+                        <p class="list-group-item"><em>Paragraph about the Author will go here after that feature is
+                                added.</em></p>
+                        <a class="list-group-item">View his Profile</a>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="col-md-9">
-            <div class="thumbnail">
-                <div class="caption-full">
-                    <h1 style="text-align: center"><a href=""><%= blog.name %></a></h1>
+            <div class="card thumbnail" style="padding : 20px;">
+                
+                <h1 class="text-center mb-0"><a href=""><%= blog.name %></a></h1>
+                   <hr>
+                <div class="blow">
+                    <img class="img-responsive" src="<%= blog.image %>" alt="<%= blog.name %>">
                 </div>
-                <img class="img-responsive" src="<%= blog.image %>" alt="<%= blog.name %>">
+                <hr>
                 <div class="caption-full">
                     <p><%= blog.description %></p>
+                    <hr>
                     <h5 class="pull-right">10 days ago.</h5>
+                    <hr>
                     <p>
                         <em>
                             Submitted by <strong><a href=""><%= blog.author.username %></a></strong>
                         </em>
                     </p>
+                    <hr>
                     <% if(currentUser && blog.author.id.equals(currentUser._id)){ %>
-                    <a href="/blogs/<%= blog._id %>/edit" class="btn btn-xs btn-warning">Edit</a>
-                    <form class="deleteForm" action="/blogs/<%=blog._id %>?_method=DELETE" method="POST">
-                        <button class="btn btn-xs btn-danger">Delete</button>
-                    </form>
+                    <div style="display: inline-flex;">
+                        <a href="/blogs/<%= blog._id %>/edit" class="btn btn-xs btn-warning">Edit</a>
+                        <form class="deleteForm" action="/blogs/<%=blog._id %>?_method=DELETE" method="POST">
+                            <button class="btn btn-xs btn-danger mx-5">Delete</button>
+                        </form>
+                    </div>
                     <% } %>
                 </div>
             </div>
             <div class="well">
-                <div class="text-right">
-                    <a href="/blogs/<%= blog._id %>/comments/new" class="btn btn-success">
-                        Add new comment
-                    </a>
-                </div />
+                <div class="card">
+                    <div class="card-body text-right">
+                        <a href="/blogs/<%= blog._id %>/comments/new" class="btn btn-success">
+                            Add new comment
+                        </a>
+                    </div>
+                </div>
                 <hr>
 
                 <% blog.comments.forEach(function(comment){ %>

@@ -1,9 +1,30 @@
 /* COMMON TO ALL */
 html {
-	position: relative; 
-	min-height: 100%; 
+  position: relative;
+  min-height: 100%;
 }
 
+.card {
+  margin: 20px 5px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+.blow {
+  transition: all 2s ease;
+}
+
+.blow:hover {
+
+  outline: 2px solid #c4c4c4;
+  outline-offset: 0.3rem;
+  transform: scale(1.04);
+}
+
+.btn-xs {
+  border-radius: 15px;
+  margin: 20px 50% 0 30%;
+  box-shadow: rgba(0, 0, 0, 0.6);
+}
 
 .chip {
   display: inline-block;
@@ -35,6 +56,13 @@ input[type=password]:hover {
   box-shadow: none;
   -webkit-box-shadow: none;
 }
+
+.img-responsive {
+  height: 400px;
+  width: 645px;
+  margin: auto;
+}
+
 
 
 
@@ -70,12 +98,21 @@ input[type=password]:hover {
   width: 100%;
 }
 
+
 .thumbnail {
   padding: 0;
 }
 
-.thumbnail .caption-full {
-  padding: 9px;
+.thumbnail h1 {
+  text-transform: capitalize;
+}
+
+.thumbnail h1 :hover {
+   border-bottom: none;
+   
+}
+.btn-success{
+  background-color: blueviolet;
 }
 
 .deleteForm {
