@@ -15,7 +15,7 @@ h1 {
 
 /* Set a style for the submit button */
 .btn {
-  background-color: green;
+  background-color: blueviolet;
   color: white;
   padding: 5px 10px;
   margin: 10px auto;
@@ -48,7 +48,7 @@ input[type=password] {
 
 input[type=text]:hover,
 input[type=password]:hover {
-  border-bottom-color: green;
+  border-bottom-color: blueviolet;
 }
 
 .pink {
@@ -69,12 +69,12 @@ body {
 /* input[type=text]:focus,
 input[type=password]:focus {
   border-color:white;
-  border-bottom-color: green;
+  border-bottom-color: blueviolet;
 } */
 
 .form-control:focus {
   border-color: white;
-  border-bottom-color: green;
+  border-bottom-color: blueviolet;
   box-shadow: none;
   -webkit-box-shadow: none;
 }

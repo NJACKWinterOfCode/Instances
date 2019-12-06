@@ -8,7 +8,7 @@
   }
 
   .btn {
-    background-color: green;
+    background-color: blueviolet;
     color: white;
     padding: 5px 10px;
     margin: 10px auto;
@@ -33,7 +33,7 @@ h1 {
 
 input[type=text]:hover,
 input[type=password]:hover {
-  border-bottom-color: green;
+  border-bottom-color: blueviolet;
 }
 
 .pink {
@@ -43,7 +43,7 @@ input[type=password]:hover {
 }
 .form-control:focus {
     border-color: white;
-    border-bottom-color: green;
+    border-bottom-color: blueviolet;
     box-shadow: none;
     -webkit-box-shadow: none;
   }

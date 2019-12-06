@@ -5,45 +5,87 @@ html {
 }
 
 
-.navbar{
-    text-transform: uppercase;
-    font-weight: 700;
-    font-size: .9rem;
-    letter-spacing: .1rem;
-    background-color : rgba(0, 0 , 0 , 0.5) !important;
-    color : green !important;
-  }
-  
-  .navbar nav li{
-    padding-right: .7rem;
-  }
-  .navbar-dark .navbar-nav .nav-link{
-    color: white;
-    padding-top: .8rem;
-  }
-  .navbar-dark .navbar-nav .nav-link:hover{
-    color: #1ebba3;
-  }
+.chip {
+  display: inline-block;
+  padding: 10px;
+  height: 39px;
+  font-size: 14px;
+
+  border-radius: 20px;
+  background-color: #f1f1f1;
+}
+
+input[type=text],
+input[type=password] {
+  border-color: white;
+  border-bottom-color: lightgray;
+  border-radius: 0;
+  border-bottom-width: 1.5px;
+  font-size: 13px;
+}
+
+input[type=text]:hover,
+input[type=password]:hover {
+  border-bottom-color: blue;
+}
+
+.form-control:focus {
+  border-color: white;
+  border-bottom-color: blue;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+}
+
+
+
+
+
+.navbar {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: .9rem;
+  letter-spacing: .1rem;
+  background-color: rgba(0, 0, 0, 0.5) !important;
+  color: green !important;
+}
+
+.navbar nav li {
+  padding-right: .7rem;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: white;
+  padding-top: .8rem;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: #1ebba3;
+}
 
 /* WELCOME PAGE */
 
 
 /* FULL BLOG READ PAGE */
 .thumbnail img {
-    width: 100%;
+  width: 100%;
 }
+
 .thumbnail {
-    padding: 0;
+  padding: 0;
 }
+
 .thumbnail .caption-full {
-    padding: 9px;
+  padding: 9px;
 }
+
 .deleteForm {
-    display: inline;
+  display: inline;
 }
+
 .details {
-    color: white;
+  color: white;
 }
+
 /* LOGIN AND SIGNUP PAGE */
 
 
@@ -57,9 +99,15 @@ html {
 
 /* FOOTER */
 footer {
-    padding: 10px 0;
-    width: 100%;
-    position: fixed; 
-    bottom: 0;
-    overflow: hidden; 
+  padding: 10px 0;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  overflow: hidden;
+}
+
+.dev {
+  padding: 2px;
+  border-radius: 9px;
+  width: 60px;
 }
