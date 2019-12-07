@@ -1,23 +1,47 @@
 <% include ../partials/header %>
 <div class="container">
     <div class="row">
-        <h1 style="text-align: center">EDIT <% blog.name %></h1>
-        <div style="width: 30%; margin: 25px auto;">
-            <form action="/blogs/<%=blog._id %>?_method=PUT" method="POST">
-                <div class="form-group">
-                    <input class="form-control" type="text" name="blog[name]" value="<%= blog.name %>" required>
+        <div class="col-md-8" style="margin : 30px auto;">
+            <div class="card"
+                style="margin : 10px; padding: 20px 30px;   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);">
+                <div class="card-body">
+                    <h1 class="card-title text-center"><span style="color: blue;text-transform: capitalize;">EDIT <%= blog.name %></span></h1>
+                    <hr>
+                    <div style=" margin: 25px auto;">
+                        <form action="/blogs/<%=blog._id %>?_method=PUT" method="POST">
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-form-label">Name</label>
+                                <div class="col-sm-9">
+                                    <input class="form-control" type="text" name="blog[name]" value="<%= blog.name %>"
+                                        required>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-form-label">Image</label>
+                                <div class="col-sm-9">
+                                    <input class="form-control" type="text" name="blog[image]" value="<%= blog.image %>"
+                                        required>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-form-label">Description</label>
+                                <div class="col-sm-9">
+                                    <input class="form-control" type="text" name="blog[description]"
+                                        value="<%= blog.description %>" required>
+                                </div>
+                            </div>
+                            <div style="display: inline-flex;">
+                                <a href="/blogs/<%=blog._id %>"><button class="btn btn-outline-info"
+                                        style="border-radius: 15px; margin : 20px 50% 0 30%">Back</button> </a>
+                                <button type="submit" class="btn btn-info"
+                                    style="border-radius: 15px; margin : 20px 50% 0 30% ;width : 150px;height: 40px;">Submit</button>
+                            </div>
+                        </form>
+
+                    </div>
+
                 </div>
-                <div class="form-group">
-                    <input class="form-control" type="text" name="blog[image]"  value="<%= blog.image %>" required>
-                </div>
-                <div class="form-group">
-                    <input class="form-control" type="text" name="blog[description]" value="<%= blog.description %>" required>
-                </div>
-                <div class="form-group">
-                    <button class="btn btn-primary btn-block">Submit!</button>
-                </div>    
-            </form>
-            <a href="/blogs/<%=blog._id %>">Go Back</a>
+            </div>
         </div>
     </div>
 </div>

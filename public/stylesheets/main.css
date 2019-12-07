@@ -4,9 +4,14 @@ html {
 	min-height: 100%; 
 }
 
-body {
-    background: black;
-    
+
+.card{
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    padding: 10px;
+}
+
+nav.navbar {
+    margin-bottom: 20px;
 }
 
 /* WELCOME PAGE */
@@ -36,14 +41,114 @@ body {
 
 
 /* HEADER */
+.img-responsive{
+    height : 400px;
+    width : 620px;
+    padding : 5px;
+}
 
+.btn-success{
+    background-color: blueviolet;
+}
 
+.chip {
+    display: inline-block;
+    padding: 10px;
+    height: 39px;
+    font-size: 14px;
+  
+    border-radius: 20px;
+    background-color: #f1f1f1;
+  }
+  
+  input[type=text],
+  input[type=password] {
+    border-color: white;
+    border-bottom-color: lightgray;
+    border-radius: 0;
+    border-bottom-width: 1.5px;
+    font-size: 13px;
+  }
+  
+  input[type=text]:hover,
+  input[type=password]:hover {
+    border-bottom-color: blue;
+  }
+  
+  .form-control:focus {
+    border-color: white;
+    border-bottom-color: blue;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+  }
+  
+  
+  
+  navbar-light {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: .9rem;
+    letter-spacing: .1rem;
+    
+    
+  }
 
-/* FOOTER */
-footer {
+  
+  
+  
+  
+  
+  
+  
+  /* WELCOME PAGE */
+  
+  
+  /* FULL BLOG READ PAGE */
+  .thumbnail img {
+    width: 100%;
+  }
+  
+  .thumbnail {
+    padding: 0;
+  }
+  
+  .thumbnail .caption-full {
+    padding: 9px;
+  }
+  
+  .deleteForm {
+    display: inline;
+  }
+  
+  .details {
+    color: white;
+  }
+  
+  /* LOGIN AND SIGNUP PAGE */
+  
+  
+  /* ADD AND EDIT COMMENT PAGE */
+  
+  
+  
+  /* HEADER */
+  
+  
+  
+  /* FOOTER */
+  footer {
     padding: 10px 0;
     width: 100%;
-    position: absolute; 
+    position: fixed;
     bottom: 0;
-    overflow: hidden; 
-}
+    overflow: hidden;
+  }
+  
+  .dev {
+    padding: 2px;
+    border-radius: 9px;
+    width: 60px;
+  }
+  body{
+    background-image: url("profilebg.jpg");
+  }

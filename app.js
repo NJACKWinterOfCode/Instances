@@ -15,7 +15,8 @@ var blogsRoutes     = require("./routes/blogroute"),
     indexRoutes     = require("./routes/indexroute");
     
 //APP INITIALIZE
-mongoose.connect("mongodb://localhost:27017/instances", { useNewUrlParser: true });
+mongoose.connect("mongodb://localhost:27017/instances",
+ { useNewUrlParser: true, useUnifiedTopology:true });
 app.use(express.static(__dirname + "/public"));
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(methodOverride("_method"));

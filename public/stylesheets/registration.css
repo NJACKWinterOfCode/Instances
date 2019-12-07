@@ -1,56 +1,80 @@
-
 h1 {
-    position: relative;
-    text-align: center;
+  position: relative;
+  text-align: center;
 }
 
 /* Add padding to containers */
 .registration_container {
-    padding:16px;
-    background-color: white;
-  }
+  padding: 30px;
+  width: 60%;
+  margin: auto;
+  background-color: white;
+  z-index: 2;
 
-  /* Set a style for the submit button */
-.registerbtn {
-    background-color: rgb(0, 0, 0);
-    color: white;
-    padding: 16px 20px;
-    margin: 8px 0;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-    opacity: 0.9;
-  }
+}
 
-  .Alreadyregisteredbtn {
-    background-color: gray;
-    color: white;
-    padding: 16px 20px;
-    margin: 8px 0;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-    opacity: 0.9;
-  }
+/* Set a style for the submit button */
+.btn {
+  background-color: blueviolet;
+  color: white;
+  padding: 5px 10px;
+  margin: 10px auto;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 14px;
+  width: 30%;
+  opacity: 0.9;
+}
 
-  /* Full-width input fields */
-input[type=text], input[type=password] {
+
+
+/* Full-width input fields */
+/* input[type=text], input[type=password] {
     width: 100%;
     padding: 15px;
     margin: 5px 0 22px 0;
     display: inline-block;
     border: none;
     background: #f1f1f1;
-  }
+  } */
+input[type=text],
+input[type=password] {
+  border-color: white;
+  border-bottom-color: lightgray;
+  border-radius: 0;
+  border-bottom-width: 1.5px;
+  font-size: 13px;
+}
 
-  body {
-    background-image: url("Sign-Up Background picture.jpg");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: 100% 100%;
-    height: 100%; 
-  }
- 
-input[type=text]:focus, input[type=password]:focus{
-  background-color: lightskyblue;
+input[type=text]:hover,
+input[type=password]:hover {
+  border-bottom-color: blueviolet;
+}
+
+.pink {
+
+  margin-bottom: 40px;
+
+}
+
+body {
+  background-image: url("Sign-Up Background picture.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  height: 100%;
+  font-size: 15px;
+}
+
+/* input[type=text]:focus,
+input[type=password]:focus {
+  border-color:white;
+  border-bottom-color: blueviolet;
+} */
+
+.form-control:focus {
+  border-color: white;
+  border-bottom-color: blueviolet;
+  box-shadow: none;
+  -webkit-box-shadow: none;
 }

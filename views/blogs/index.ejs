@@ -1,29 +1,30 @@
 <% include ../partials/header %>
 
-    <header class="jumbotron text-center">
+<div class="container">
+    <div class="jumbotron text-center">
         <div class="container">
-            <h1>Welcome To Instances</h1>
+            <h1>Welcome To Instances!</h1>
             <p>Stories and Journeys and Life.</p>
             <p>
-                <a class="btn btn-primary btn-lg" href="/blogs/new">Add New Instance</a>
+                <a class="btn btn-primary" href="/blogs/new">Add New Instance</a>
             </p>
         </div>
-    </header>
-    <div class="container">
-    <div class="row text-center" style="display: flex; flex-wrap: wrap;">
+    </div>
+
+    <div class="row text-center">
         <% blogs.forEach(function(blog){ %>
-            <div class="col-md-3 col-sm-6">
-                <div class="thumbnail">
-                    <img src="<%= blog.image %>" 
-                        alt="<%= blog.name %>">
-                    <div class="caption">
-                        <h4><%= blog.name %></h4>
-                    </div>
+        <div class="col-md-3 col-sm-6">
+            <div class="card bg-light" style="padding : 12px 0; margin: 8px; ">
+                <img src="<%= blog.image %>" alt="<%= blog.name %>" style="height: 135px; width : 185px; margin: 2px auto;">
+                <hr>
+                <div class="card-body" style="padding : 4px">
+                    <h4 class="card-title"><%= blog.name %></h4>
                     <p>
-                        <a href="/blogs/<%= blog._id %>" class="btn btn-primary">More Info</a>
+                        <a href="/blogs/<%= blog._id %>" class="btn btn-sm btn-primary">More Info</a>
                     </p>
                 </div>
             </div>
+        </div>
         <% }); %>
     </div>
 </div>

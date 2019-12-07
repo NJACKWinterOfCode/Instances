@@ -1,0 +1,49 @@
+.registration_container {
+    padding: 30px;
+    width: 60%;
+    margin: auto;
+    background-color: white;
+    z-index: 2;
+  
+  }
+
+  .btn {
+    background-color: green;
+    color: white;
+    padding: 5px 10px;
+    margin: 10px auto;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 14px;
+    width: 30%;
+    opacity: 0.9;
+  }
+  input[type=text],
+input[type=password] {
+  border-color: white;
+  border-bottom-color: lightgray;
+  border-radius: 0;
+  border-bottom-width: 1.5px;
+  font-size: 13px;
+}
+h1 {
+    position: relative;
+    text-align: center;
+  }
+
+input[type=text]:hover,
+input[type=password]:hover {
+  border-bottom-color: green;
+}
+
+.pink {
+
+  margin-bottom: 40px;
+
+}
+.form-control:focus {
+    border-color: white;
+    border-bottom-color: green;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+  }

@@ -1,41 +1,68 @@
 <% include ./partials/header %>
 <html>
-    <head>
-        <link rel="stylesheet" href="/stylesheets/registration.css">
-    </head>
+
+<head>
+    <link rel="stylesheet" href="/stylesheets/registration.css">
+</head>
+
 <body>
     <div class="image">
-    <form action="/register" method="POST">
-        <div class = "container"> 
-            <div class = "registration_container">
-        <h1 style="font-size: 40px;">Instances</h1>
-        <hr>
-        <p style="text-align: center;"> Register down below and start making Instances! </p>
-                
-        <label for="username"><b>First Name:</b></label>
-        <input type="text" name="firstname" placeholder="Enter First Name" pattern="[a-zA-Z]*" required>
+        <div class="container perl">
+            <div class="registration_container" style="margin: 50px auto;">
+                <form action="/register" method="POST"
+                    style="padding: 10px; margin-bottom: 40px; background-color: white;">
+                    <div class="pink">
+                        <h1 style="font-size: 40px; color: blueviolet">Instances</h1>
+                        <hr>
+                        <p style="text-align: center;"> Register down below and start making Instances! </p>
+                    </div>
+                    <div class="form-group row">
+                        <label for="firstname" class="col-sm-2 col-form-label">FirstName:</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" type="text" name="firstname"
+                                placeholder="Enter First Name" pattern="[a-zA-Z]*" required>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="lastname" class="col-sm-2 col-form-label">LastName:</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" type="text" name="lastname"
+                                placeholder="Enter Last Name" pattern="[a-zA-Z]*" required>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="username" class="col-sm-2 col-form-label">UserName:</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" name="username" placeholder="Enter UserName"
+                                required>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="password" class="col-sm-2 col-form-label">Password:</label>
+                        <div class="col-sm-10">
+                            <input type="password" class="form-control" name="password" placeholder="Enter Password"
+                                required minlength="8">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="password" class="col-sm-2 col-form-label">Email:</label>
+                        <div class="col-sm-10">
+                            <input type="text" placeholder="Enter Email" id="email" name="email" class="form-control"
+                                required>
+                        </div>
+                    </div>
 
-        <label for="username"><b>Last Name:</b></label>
-        <input type="text" name="lastname" placeholder="Enter Last Name" pattern="[a-zA-Z]*" required>
 
-        <label for="username"><b>Username:</b></label>
-        <input type="text" name="username" placeholder="Enter Username" required>
-        
-        <label for="password"><b>Password:</b></label>
-        <input type="password" name="password" placeholder="Enter Password" required minlength="8">
-        
-        <label for="email"><b>Email</b></label>
-        <input type="text" placeholder="Enter Email" id="email" name="email" required> 
-        
-        <button type="submit" class="registerbtn">SIGN UP</button>
-        <button type="button" class="Alreadyregisteredbtn" onclick= "location.href='login'">Already have an account? <u>Sign In</u></button>
-        
-    </div>
+                    <button type="submit" class="btn btn-success"
+                        style="border-radius: 15px; margin : 20px 50% 0 30%">Submit <i
+                            class="fas fa-arrow-right fa-0.5x"></i></button>
+
+                </form>
+            </div>
         </div>
-    </form>    
-</div>
-</body>
-<!-- <script>
+    </div>
+
+    <!-- <script>
     var email = document.getElementById("email");
 
     email.addEventListener("input", function (event) {
@@ -47,7 +74,11 @@
     });
 
 </script> -->
-<% include ./partials/footer %>
+    <div class="container">
+        <p class="footer-copyright text-center py-3" style="color : white;">
+            Instances 2019 &copy; Bishal Deb
+        </p>
+    </div>
+</body>
+
 </html>
-
-
