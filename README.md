@@ -12,13 +12,13 @@
 <br>
 
 ## Demo
-- Login Page <br>
+- Home Page <br>
 <img src="https://raw.githubusercontent.com/NJACKWinterOfCode/Instances/master/images/landing.png" width="520" height="320">
 
--  Registration Page <br>
+-  Registration Page / Login Page<br>
 <img src="https://raw.githubusercontent.com/NJACKWinterOfCode/Instances/master/images/home.png" width="520" height="320">
 
--  Comment Page <br>
+-  Blog detail Page <br>
 <img src="https://raw.githubusercontent.com/NJACKWinterOfCode/Instances/master/images/blog.png" width="520" height="320">
 
 <br>
