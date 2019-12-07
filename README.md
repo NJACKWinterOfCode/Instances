@@ -25,36 +25,22 @@ This is a site to post blogs (here we call it Instances ). Anyone can read the b
 
 <br>
 
-
-## Tools used
-* NodeJS, ExpressJS, Mongoose
-* Database - MongoDB
-
-<br>
-
-## Steps to run
-
-### Configuring MongoDB
-
-* Set up your MongoDB Database as in the tutorial: [MongoDb Tutorial (click here)](https://www.youtube.com/watch?v=FwMwO8pXfq0&t=27s
-)
-### Installing depencencies and running the app
-
-* Fork the repository
-
-* Clone the repository  
-  `git clone https://github.com/<username>/Instances.git`   
-  where \< username \> is your username in your bash
-* Follow the steps as following in the bash
-
-```sh
- cd keep-clone
-
- npm install
-
- npm start
-```
-* Now head over to http://localhost:1500/ to see it working.
+### Technologies Used :
+  * NodeJS
+  * ExpressJS
+  * Mongoose
+  * Database - MongoDB
+### How to Run Locally :
+1. Clone the Repository
+     `git clone https://github.com/NJACKWinterOfCode/Instances.git`
+2. cd into Instances
+      `cd Instances`
+3. Install all dependencies      
+      `npm install`     
+4. Start Local Server      
+      `npm start`
+5. Run the app in development mode
+Open `[http://localhost:1500](http://localhost:1500)` to view in the browser. 
 
 <br>
 
@@ -62,9 +48,7 @@ This is a site to post blogs (here we call it Instances ). Anyone can read the b
 
 * Contributors are welcome and please comment on the issue before working on it.
 * Create pull requests, submit bugs, suggest new features.
-* Join the Gitter Channel for queries and other related stuff.
-
-gitter Channel : https://gitter.im/InstancesProject/community
+* Join the Gitter Channel for queries and other related stuff [<img src="https://image.flaticon.com/icons/svg/906/906369.svg" width="15" padding="15">](https://gitter.im/InstancesProject/community).
 
 <br>
 
