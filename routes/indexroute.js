@@ -2,7 +2,7 @@ var express     = require("express"),
     User        = require("../models/usermodel"),
     passport    = require("passport"),
     router      = express.Router({mergeParams: true});
-const { check, validationResult } = require('express-validator');
+
 
 // HOME PAGE
 router.get("/", function(req, res){
@@ -14,17 +14,14 @@ router.get("/register", function(req, res){
     res.render("register");
 });
 
-router.post("/register",[check('email', 'Please include a valid email').isEmail().withMessage('Must be a valid email')], function(req, res){
+router.post("/register", function(req, res){
     var {username , email, lastname , firstname , gender 
         , description1 , birthdate , role , age , profilepicture ,
          phonenumber} = req.body;
     var newUser = new User({username , email, lastname , 
         firstname , gender , description1 , birthdate , role , age , 
         profilepicture , phonenumber});
-        const errors = validationResult(req);
-        if (!errors.isEmpty()) {
-        return res.status(400).json({ errors: errors.array() });
-        }
+        
     User.register(newUser, req.body.password, function(err, user){
         if(err){
             req.flash("error", err.message);
