@@ -77,8 +77,10 @@
                     <p class="card-text"><%= blog.description %></p>
                     <hr>
                     <h7>
-                        Submitted by <strong><a href=""><%= blog.author.username %></a></strong> |
-                        <em> 10 days ago.</em>
+                        Submitted by <strong><a href=""><%= blog.author.username %></a></strong> |   on
+                        <% if(blog.date){ %>
+                            <em class="text-primary">   <%= formatDate(blog.date) %></em>
+                        <% } %>
                     </h7>
                     <hr>
                     <% if(currentUser && blog.author.id.equals(currentUser._id)){ %>
