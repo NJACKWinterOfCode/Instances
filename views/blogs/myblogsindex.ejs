@@ -1,0 +1,40 @@
+<% include ../partials/header %>
+
+<div class="container">
+
+    <div class="row text-center">
+    
+        <% myBlogs.forEach(function(myBlog){ %>
+    
+            <div class="col-md-3 ">
+    
+                <div class="card bg-light" style="padding : 12px 0; margin: 8px; ">
+                        <img src="<%= myBlog.image[0] %>" alt="<%= myBlog.name %>" style="height: 135px; width : 185px; margin: 2px auto;">
+                        <hr>
+                        
+                        <div class="card-body" style="padding : 4px">
+
+                            <h4 class="card-title"><%= myBlog.name %></h4>
+                            
+                            <div class="btn-group btn-group-xs">
+                            
+                                <a href="/blogs/<%= myBlog._id %>" class="btn btn-sm btn-primary">More Info</a>
+
+                                <a href="/blogs/<%= myBlog._id %>/edit" class="btn btn-sm btn-warning">Edit</a>
+
+                                <form class="deleteForm" action="/blogs/<%=myBlog._id %>/myBlogs?_method=DELETE" method="POST">
+                                    <button class="btn btn-sm btn-danger"><a onClick="javascript: return confirm('Are you sure you want to delete this post?');"  style='color:#fff'>Delete</a></button>
+                                </form>
+                            
+                            </div>
+
+                        </div>
+                            
+                </div>
+                
+            </div>
+        <% }); %>
+    </div>
+
+</div>
+<% include ../partials/footer %>

@@ -35,10 +35,13 @@
                         <ul class="dropdown-menu">
                                 <a href="../user/<%= currentUser.username %>" style="text-decoration: none;" ><i class="fa fa-fw fa-user"></i> Account</a>
                                 <li class="divider"></li>
-                         <a href="#" style="text-decoration: none;" ><i class="far fa-images"></i> Posts <%=  %>  </a>
-                            <li class="divider"></li>
-                        <a href="/logout" style="text-decoration: none;" ><i class="fa fa-fw fa-power-off" ></i> Log Out</a>                        
-                        </ul>
+                        
+                                <a href="../blogs/<%= currentUser._id %>/myBlogs" 
+                                    style="text-decoration: none;" ><i class="far fa-images"></i> Posts</a>
+                                <li class="divider"></li>
+                                                                
+                                <a href="/logout" style="text-decoration: none;" ><i class="fa fa-fw fa-power-off" ></i> Log Out</a>                        
+                                </ul>
                     </li>
                 </ul> 
                     <% } %>

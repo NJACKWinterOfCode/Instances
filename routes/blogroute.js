@@ -42,6 +42,20 @@ router.get("/", function(req, res){
     });
 });
 
+
+//SHOW INSTANCES OF ONLY LOGGED IN USER
+router.get('/:user_id/myBlogs',middleware.isLoggedIn, function(req, res){
+    Blog.find({user:req.params.user_id}, function(err, data){
+        if(err){
+            console.log(err);
+        } else {
+            res.render("blogs/myblogsindex", {myBlogs: data});
+        }
+    });
+});
+
+
+
 //NEW - ADD INSTANCE
 router.get("/new", middleware.isLoggedIn, function(req, res){
     res.render("blogs/new");
@@ -124,5 +138,17 @@ router.delete("/:id", middleware.ifOwned, function (req, res) {
         }   
     });
 });  
+
+// DELETE MYBLOG AND REDIRECT TO THE SAME PAGE
+router.delete("/:id/myBlogs", middleware.ifOwned, function (req, res) {
+    Blog.findByIdAndRemove(req.params.id, function(err){
+        if(err){
+            res.redirect("/blogs");
+        } else {
+            res.redirect('back');
+        }   
+    });
+});  
+
 
 module.exports = router;
